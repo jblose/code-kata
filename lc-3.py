@@ -6,9 +6,17 @@ class Solution(object):
         """
         fullLen = len(s)
         dict = {}
-        for x in s:
-            foundStr = x[: s.find(x + 1)]
-            dict[x] = foundStr
+        for x, alpha in enumerate(s):
+            if x < fullLen:
+                foundAlpha = s.find(alpha, x + 1)
+                foundStr = s[x:foundAlpha]
+                repeats = False
+                for y in foundStr:
+                    if foundStr.count(y) > 1:
+                        repeats = True
+                if repeats == False:
+                    print(foundStr)
+                    dict[x] = foundStr
 
 
 s = "abcabcbb"
