@@ -25,3 +25,10 @@ def test_bubble():
 
 def test_dasndsadmx():
     assert shortestPalindrome("dasndsadmx") == "xmdasdnsadasndsadmx"
+
+if __name__ == "__main__":
+    f = open("input.dat","r")
+    out = open("output.out","w")
+    
+    for line in f:
+        out.write(shortestPalindrome(line.strip())+"\n")
