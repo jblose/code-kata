@@ -22,7 +22,7 @@ for x in podDirs:
     if not listPods.__contains__(x):
         fullDelPath = dataDir + os.path.sep + x
         print("D: " + fullDelPath)
-        # os.rmdir(fullDelPath)
+        os.rmdir(fullDelPath)
     else:
         fullDelPath = dataDir + os.path.sep + x
         print("K: " + fullDelPath)
